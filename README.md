@@ -71,31 +71,8 @@ En conjunto, estas tecnologías me permitieron construir una aplicación modular
 ## Arquitectura
 ### Proyecto
 El proyecto Inventarios Web está desarrollado en Node.js utilizando el patrón de diseño Modelo-Vista-Controlador (MVC). Este patrón permite separar responsabilidades, facilitando el mantenimiento y la escalabilidad del proyecto.
-Como se muestra en el siguiente diagrama
- ┌─────────────┐
- │   Cliente   │
- │  (Browser)  │
- └─────┬───────┘
-       ▼
- ┌─────────────┐
- │   Vistas    │  <- Handlebars (.hbs)
- └─────┬───────┘
-       ▼
- ┌─────────────┐
- │Controladores│
- │(controllers)│
- └─────┬───────┘
-       │
-       ▼
- ┌─────────────┐
- │   Modelos   │
- │  (models)   │
- └─────┬───────┘
-       ▼
-┌─────────────┐
-│  Base de    │
-│  Datos MySQL│
-└─────────────┘
+Cliente -> Vistas -> Controladores -> Modelos -> Base de Datos
+
 ### Base de datos 
 El proyecto utiliza una base de datos relacional en MySQL para gestionar la información de productos, categorías y movimientos de inventario. 
 La estructura principal incluye las siguientes tablas con las siguientes especificaciones:
