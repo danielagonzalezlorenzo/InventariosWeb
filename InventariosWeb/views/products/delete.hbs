@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="card p-4 form-card">
+  <h3 class="page-title">Eliminar Producto</h3>
+  <div id="message"></div>
+  <form action="/products/delete" method="POST" id="formDeleteProduct">
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">SKU</label>
+      <input type="text" name="sku" id="sku" class="form-control" required>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-nav">Eliminar</button>
+    <a href="/dashboard" class="btn btn-outline-secondary">Cancelar</a>
+    </div>
+  </form>
+</div>
+</div>
+
+<script src="/js/products.js"></script>

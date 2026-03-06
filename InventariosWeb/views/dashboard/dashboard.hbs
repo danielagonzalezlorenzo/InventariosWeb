@@ -1,0 +1,54 @@
+<div class="container mt-5">
+
+    <div class="card p-4">
+        <h3 class="page-title">Resumen de Inventario</h2>
+        <div class="container mt-4">
+    <div>
+    <div class="table-filters d-flex gap-3 mb-3">
+        <!-- Select para filtro de categoría -->
+      <select id="selectCategoria" class="form-select filter-select">
+        <option value="0">Todas las categorías</option>
+        <!-- Opciones dinámicas desde backend -->
+        {{#each categories}}
+        <option value="{{this.id_categoria}}">{{this.nombre}}</option>
+      {{/each}}
+      </select>
+
+      <!-- Input para búsqueda -->
+      <input type="search" id="searchInput" class="form-control search-input" placeholder="🔍 Buscar producto...">
+    </div>
+    <div class="table-container">
+    <table class="table custom-table table-hover" id="tablaProductos">
+        <thead class="table-dark">
+            <tr>
+                <th>SKU</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>U.Medida</th>
+                <th>Stock</th>
+                <th>Stock Min</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each stockData}}
+            <tr>
+                <td>{{this.sku_producto}}</td>
+                <td>{{this.nombre_producto}}</td>
+                <td>{{this.categoria}}</td>
+                <td>{{this.precio_unitario}}</td>
+                <td>{{this.unidad_medida}}</td>
+                <td>{{this.stock_actual}}</td>
+                <td>{{this.stock_minimo}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+
+        
+    </div>
+</div>
+
+<script src="/js/dashboard.js"></script>

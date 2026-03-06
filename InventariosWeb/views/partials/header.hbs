@@ -1,0 +1,44 @@
+<nav class="navbar navbar-light bg-light px-3 d-flex justify-content-between align-items-center flex-wrap">
+  <span class="navbar-text me-3">
+    Bienvenido, {{user.username}}
+  </span>
+
+  <div class="d-flex align-items-center flex-wrap">
+   <a href="/dashboard" class="btn btn-nav mx-2 mb-2 mb-lg-0">
+  <i class="bi bi-house-door"></i> Inicio
+</a>
+    <!-- Menú Agregar -->
+    <div class="dropdown mx-2 mb-2 mb-lg-0">
+      <button class="btn btn-nav dropdown-toggle" type="button" id="dropdownAgregar" data-bs-toggle="dropdown" aria-expanded="false">
+        Agregar
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownAgregar">
+        <li><a class="dropdown-item" href="/products/add">Producto</a></li>
+        <li><a class="dropdown-item" href="/categories/add">Categoría</a></li>
+        <li><a class="dropdown-item" href="/movements/add">Movimiento</a></li>
+      </ul>
+    </div>
+    <!-- Menú Editarr -->
+    <div class="dropdown mx-2 mb-2 mb-lg-0">
+      <button class="btn btn-nav dropdown-toggle" type="button" id="dropdownEditar" data-bs-toggle="dropdown" aria-expanded="false">
+        Editar
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownEditar">
+        <li><a class="dropdown-item" href="/products/edit">Producto</a></li>
+        <li><a class="dropdown-item" href="/categories/edit">Categoría</a></li>
+      </ul>
+    </div>
+
+    <!-- Menú Eliminar -->
+    <div class="dropdown mx-2 mb-2 mb-lg-0">
+      <button class="btn btn-nav dropdown-toggle" type="button" id="dropdownEliminar" data-bs-toggle="dropdown" aria-expanded="false">
+        Eliminar
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownEliminar">
+        <li><a class="dropdown-item" href="/products/delete">Producto</a></li>
+        <li><a class="dropdown-item" href="/categories/delete">Categoría</a></li>
+      </ul>
+    </div>
+
+  <a href="/auth/login" class="btn btn-outline-secondary mb-2 mb-lg-0">Cerrar sesión</a>
+</nav>

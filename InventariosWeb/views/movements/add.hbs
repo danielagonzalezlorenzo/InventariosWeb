@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="card p-4 form-card">
+  <h3 class="page-title">Registrar Movimiento</h3>
+  <div id="message"></div>
+  <form action="/movements/add" method="POST" id="formAddMovement">
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">SKU Producto</label>
+      <input type="text" name="sku" id="sku" class="form-control" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Tipo de Movimiento</label>
+      <select name="category_id" id="tipo" class="form-select" required>
+        <option value="entrada">Entrada</option>
+        <option value="salida">Salida</option>
+      </select>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Cantidad</label>
+      <input type="text" name="cantidad" id="cantidad" class="form-control" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Motivo</label>
+      <input type="text" name="motivo" id="motivo" class="form-control" required>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-nav">Guardar</button>
+    <a href="/dashboard" class="btn btn-outline-secondary">Cancelar</a>
+
+  </form>
+</div>
+
+<script src="/js/movements.js"></script>

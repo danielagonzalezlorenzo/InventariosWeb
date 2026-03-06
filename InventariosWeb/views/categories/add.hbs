@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="card p-4 form-card">
+  <h3 class="page-title">Agregar Categoría</h3>
+  <div id="message"></div>
+  <form action="/categories/add" method="POST" id="formAddCategory">
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">SKU</label>
+      <input type="text" name="sku" id="sku" class="form-control" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Nombre</label>
+      <input type="text" name="name" id="name" class="form-control" required>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-nav">Guardar</button>
+    <a href="/dashboard" class="btn btn-outline-secondary">Cancelar</a>
+    </div>
+  </form>
+</div>
+</div>
+
+<script src="/js/categories.js"></script>

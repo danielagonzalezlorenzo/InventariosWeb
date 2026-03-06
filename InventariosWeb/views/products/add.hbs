@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="card p-4 form-card">
+  <h3 class="page-title">Agregar Producto</h3>
+  <div id="message"></div>
+  <form action="/products/add" method="POST" id="formAddProduct">
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">SKU</label>
+      <input type="text" name="sku" id="sku" class="form-control custom-input" min="0" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Nombre</label>
+      <input type="text" name="name" id="name" class="form-control custom-input" required>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Categoría</label>
+      <select name="category_id" id="category" class="form-select custom-input" required>
+        <option value="">Seleccione una categoría</option>
+        {{#each categories}}
+          <option value="{{this.id_categoria}}">{{this.nombre}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Precio</label>
+      <input type="text" name="precio" id="precio" class="form-control custom-input" required>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Unidad de medida</label>
+      <input type="text" name="medida" id="medida" class="form-control custom-input" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Stock minimo</label>
+      <input type="number" name="stock_min" id="stock_min" class="form-control custom-input" min="0" required>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-nav">Guardar</button>
+    <a href="/dashboard" class="btn btn-outline-secondary">Cancelar</a>
+    </div>
+  </form>
+</div>
+</div>
+
+<script src="/js/products.js"></script>
